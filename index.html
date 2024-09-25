@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Bangladesh</title>
+
+    <style>
+        .navbar{
+            position: sticky;
+            
+        }
+
+    </style>
     <!--daisyui cdn-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,50 +33,50 @@
       </script>
 
 </head>
-<body>
-    <header class="md:container mx-auto">
+<body class="relative">
+    <header class=" sticky top-0 z-50 backdrop-blur-md  opacity-90 md:container mx-auto ">
         <!--navbar section start-->
-        <section  class="bg-secondery-bg">
-            <nav>
-                <div class="flex justify-between  pt-5 pb-14 mx-5 lg:mx-20">
-                    <div class="bg-primary1">
-                        <button class="btn px-6 py-0 bg-primary-bg font-bold text-lg">
-                            Blog
-                        </button>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <img class="w-10 h-10" src="assets/logo.png" alt="">
-                        <h1 class="font-bold text-lg">Donate Bangladesh</h1>
-                    </div>
-                    <div class="flex items-center justify-items-center gap-3">
-                        <img class="w-7 h-7" src="assets/coin.png" alt="">
-                        <h3 class="font-bold text-lg">5500 BDT</h3>
+        <nav>
+                <div  class="bg-secondery-bg">
+                    <div class="flex justify-between  pt-5 pb-14 mx-5 lg:mx-20">
+                        <div class="bg-primary1">
+                            <a href="./blog.html" id="btn-blog" class="btn px-6 py-0 bg-primary-bg font-bold text-lg">
+                                Blog
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <img class="w-10 h-10" src="assets/logo.png" alt="">
+                            <h1 class="font-bold text-lg">Donate Bangladesh</h1>
+                        </div>
+                        <div class="flex items-center justify-items-center gap-3">
+                            <img class="w-7 h-7" src="assets/coin.png" alt="">
+                            <div class="font-bold text-lg"><span  id="main-balance">5500</span> BDT</div>
+                        </div>
                     </div>
                 </div>
-            </nav>
-        </section>
-
-        <section>
-            <div class="flex mx-5 mt-10 mb-5 lg:mx-20 justify-center gap-5">
-                <div class="">
-                    <button class="btn bg-primary-bg font-bold text-lg">Donation</button>
-                </div>
+    
                 <div>
-                    <button class="btn font-bold text-lg">History</button>
+                <div class="flex mx-5 pt-10 pb-5 lg:mx-20 justify-center gap-5">
+                    <div class="">
+                        <button class="btn bg-primary-bg font-bold text-lg">Donation</button>
+                    </div>
+                    <div>
+                        <button id="btn-history" class="btn font-bold text-lg">History</button>
+                    </div>
                 </div>
-            </div>
-        </section>
+                </div>
+        </nav>
         <!--navbar section end-->
     </header>
     <main class="md:container mx-auto">
         <!--card section start-->
-        <section>
+        <section id="card-section">
             <!--card-1-->
-            <div class="mx-5 lg:mx-20 grid grid-cols-1 border-2 border-stone-200 rounded-lg lg:grid-cols-2 p-5 gap-5">
+            <div class=" mx-5 lg:mx-20 grid grid-cols-1 border-2 border-stone-200 rounded-lg lg:grid-cols-2 p-5 gap-5">
                 <div><img src="assets/noakhali.png" alt=""></div>
                 
                 <div>
-                    <button class="btn flex font-bold gap-2"><img src="assets/coin.png" alt=""><p>0 BDT</p></button>
+                    <button class="btn flex font-bold gap-2"><img src="assets/coin.png" alt=""><p class="text-gray-400"><span id="at-noakhali">0</span> BDT</p></button>
 
                     <div>
                         <h1 class="font-bold text-lg my-5">Donate for Flood at Noakhali, Bangladesh</h1>
@@ -76,10 +84,11 @@
                     </div>
                     <div class="">
                        <div class="grid grid-cols-1 py-5">
-                        <input class="p-3 border rounded-md" placeholder="Write Donation Amount" type="" id="" name="">
+                        <input id="donation-amount" class="p-3 border rounded-md" placeholder="Write Donation Amount" type="number" autocomplete="off" required />
                        </div>
                        <div class="grid grid-cols-1">
-                        <button class="btn bg-primary-bg font-bold text-lg">Donate Now</button>
+                        <button id="btn-donate" class="btn bg-primary-bg font-bold text-lg">Donate Now</button>
+                        
                        </div>
                     </div>
                 </div>
@@ -90,7 +99,7 @@
                 <div><img src="assets/feni.png" alt=""></div>
                 
                 <div>
-                    <button class="btn flex font-bold gap-2"><img src="assets/coin.png" alt=""><p>600 BDT</p></button>
+                    <button class="btn flex font-bold gap-2"><img src="assets/coin.png" alt=""><p class="text-gray-400"><span id="at-feni">600</span> BDT</p></button>
 
                     <div>
                         <h1 class="font-bold text-lg my-5">Donate for Flood Relief in Feni,Bangladesh</h1>
@@ -98,10 +107,11 @@
                     </div>
                     <div class="">
                        <div class="grid grid-cols-1 py-5">
-                        <input class="p-3 border rounded-md" placeholder="Write Donation Amount" type="" id="" name="">
+                        <input id="donation-amount2" class="p-3 border rounded-md" placeholder="Write Donation Amount" type="" name="">
                        </div>
                        <div class="grid grid-cols-1">
-                        <button class="btn bg-primary-bg font-bold text-lg">Donate Now</button>
+                        <button id="btn-donate2" class="btn bg-primary-bg font-bold text-lg">Donate Now</button>
+                        
                        </div>
                     </div>
                 </div>
@@ -112,7 +122,7 @@
                 <div><img src="assets/quota-protest.png" alt=""></div>
                 
                 <div>
-                    <button class="btn flex font-bold gap-2"><img src="assets/coin.png" alt=""><p>2600 BDT</p></button>
+                    <button class="btn flex font-bold gap-2"><img src="assets/coin.png" alt=""><p class="text-gray-400"><span id="at-quota-movement">2400</span>  BDT</p></button>
 
                     <div>
                         <h1 class="font-bold text-lg my-5">Aid for Injured in the Quota Movement</h1>
@@ -120,20 +130,43 @@
                     </div>
                     <div class="">
                        <div class="grid grid-cols-1 py-5">
-                        <input class="p-3 border rounded-md" placeholder="Write Donation Amount" type="" id="" name="">
+                        <input id="donation-amount3" class="p-3 border rounded-md" placeholder="Write Donation Amount" type=""  name="">
                        </div>
                        <div class="grid grid-cols-1">
-                        <button class="btn bg-primary-bg font-bold text-lg">Donate Now</button>
+                        <button id="btn-donate3" class="btn bg-primary-bg font-bold text-lg">Donate Now</button>
+                        
                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <!--card section end-->
+
+        <section>
+          <!--history section-->
+
+          
+        </section>
+        <!--modal-->
+        <dialog id="my_modal_4" class="modal">
+            <div class="modal-box">
+              <h3 class="text-lg font-bold">Congrates!</h3>
+              <img src="./assets/coin.png" alt="">
+              <p class="py-4">You Have Donated for Humankind</p>
+              <h3 class="font-semibold text-md">Successfully</h3>
+              <div class="modal-action justify-center items-center">
+                <form method="dialog">
+                  <button class="btn">Close confirmation</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
     </main>
     <footer>
 
     </footer>
+    <script src="js/index.js"></script>
     
+   
 </body>
 </html>
